@@ -1,0 +1,42 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <title>Intern Management</title>
+  <link rel="stylesheet" href="css/style.css">
+</head>
+<body>
+  <h1>Intern Management</h1>
+
+  <!-- Add Intern Form -->
+  <form id="addInternForm">
+    <input type="text" id="name" placeholder="Name" required>
+    <input type="email" id="email" placeholder="Email" required>
+    <input type="text" id="department" placeholder="Department" required>
+    <input type="date" id="start_date" required>
+    <input type="date" id="end_date" required>
+    <button type="submit">Add Intern</button>
+  </form>
+
+  <!-- Search & Filter -->
+  <input type="text" id="searchQuery" placeholder="Search by name, email, dept">
+  <select id="statusFilter">
+    <option value="">All</option>
+    <option value="active">Active</option>
+    <option value="inactive">Inactive</option>
+  </select>
+  <button onclick="fetchInterns()">Search</button>
+
+  <!-- Intern List -->
+  <table border="1">
+    <thead>
+      <tr>
+        <th>Name</th><th>Email</th><th>Dept</th><th>Start</th><th>End</th><th>Status</th><th>Actions</th>
+      </tr>
+    </thead>
+    <tbody id="internTableBody"></tbody>
+  </table>
+
+  <script src="js/interns.js"></script>
+</body>
+</html>

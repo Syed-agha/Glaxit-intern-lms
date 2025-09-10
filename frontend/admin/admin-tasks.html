@@ -1,0 +1,29 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <title>Admin Task Manager</title>
+  <link rel="stylesheet" href="css/style.css">
+</head>
+<body>
+  <h1>Admin – Task Management</h1>
+
+  <form id="createTaskForm">
+    <input type="text" id="title" placeholder="Task Title" required>
+    <textarea id="description" placeholder="Task Description" required></textarea>
+    <input type="date" id="deadline" required>
+    <button type="submit">Create Task</button>
+  </form>
+
+  <h2>Assign Task</h2>
+  <form id="assignForm">
+    <input type="number" id="task_id" placeholder="Task ID" required>
+    <input type="text" id="intern_ids" placeholder="Intern IDs (comma separated)" required>
+    <button type="submit">Assign</button>
+  </form>
+
+  <h2>All Tasks</h2>
+  <div id="taskList"></div>
+
+  <script src="js/admin-tasks.js"></script>
+</body>
+</html>
